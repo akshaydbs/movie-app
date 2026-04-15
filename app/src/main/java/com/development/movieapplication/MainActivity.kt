@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.development.coredesign.theme.AppTheme
 import com.development.movie.ui.MovieScreen
+import com.development.movie.ui.MoviesRoute
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AppTheme{
-                MovieScreen()
+                MoviesRoute()
             }
         }
     }

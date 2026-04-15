@@ -1,3 +1,4 @@
+/*
 package com.development.network.factory
 
 import com.development.network.config.NetworkConfig
@@ -36,9 +37,11 @@ object OkHttpFactory {
                     )
                 }
 
-                config.pinning?.let { pinningConfig ->
+           */
+/*     config.pinning?.let { pinningConfig ->
                     certificatePinner(createCertificatePinner(pinningConfig))
-                }
+                }*//*
+
             }
             .build()
     }
@@ -52,4 +55,4 @@ object OkHttpFactory {
             }
         }.build()
     }
-}
+}*/

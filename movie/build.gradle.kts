@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.moshi.kotlin)
     implementation(libs.retrofit2.converter.moshi)
+    implementation("io.insert-koin:koin-androidx-compose:3.5.6")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("io.coil-kt:coil-compose:2.6.0")
     implementation(project(":network"))

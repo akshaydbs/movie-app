@@ -3,7 +3,9 @@ package com.development.movie.data.di
 import com.development.movie.data.MovieApi
 import com.development.movie.data.MovieRepositoryImpl
 import com.development.movie.domain.MoviesRepository
+import com.development.movie.ui.MovieViewModel
 import com.development.network.factory.RetrofitFactoryProvider
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
@@ -13,10 +15,11 @@ private const val TMDb_API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYmMzNWFkMTkzZ
 val movieModule = module{
     single<MovieApi> {provideMovieApi(get())}
     single<MoviesRepository> {provideMovieRepository(get())}
+    viewModel { MovieViewModel(get()) }
 }
 
 fun provideMovieApi(retrofit: RetrofitFactoryProvider): MovieApi {
-    return retrofit.create(BASE_URL).create(MovieApi::class.java)
+    return retrofit.createService(BASE_URL)
 }
 
 fun provideMovieRepository(movieApi: MovieApi): MoviesRepository {

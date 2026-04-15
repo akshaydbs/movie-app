@@ -31,4 +31,10 @@ fun AppTypography(): Typography = Typography(
         fontSize = spDimen(R.dimen.type_label_large),
         lineHeight = spDimen(R.dimen.line_label_large),
     ),
+    labelSmall = TextStyle(
+        fontFamily = AppFonts.primary,
+        fontWeight = FontWeight.Light,
+        fontSize = spDimen(R.dimen.type_label_medium),
+        lineHeight = spDimen(R.dimen.line_label_medium),
+    )
 )

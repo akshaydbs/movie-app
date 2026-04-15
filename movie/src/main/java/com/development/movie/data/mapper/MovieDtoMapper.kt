@@ -9,7 +9,7 @@ fun MovieDto.toDomain(): Movie {
         id = id ?: -1,
         title = title ?: originalTitle.orEmpty(),
         overview = overview.orEmpty(),
-        posterPath = posterPath,
+        posterPath = "https://image.tmdb.org/t/p/w500"+posterPath,
         releaseDate = releaseDate,
         rating = voteAverage ?: 0.0
     )
