@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
-    id("movie.android.library")
+    id("movie.android.library") version "1.0.0"
 }
 
 android {

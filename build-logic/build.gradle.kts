@@ -1,7 +1,11 @@
 plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
+    `maven-publish`
 }
+
+group = "com.development.buildlogic"
+version = "1.0.0"
 
 repositories {
     google()
